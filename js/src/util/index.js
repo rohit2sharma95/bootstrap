@@ -47,11 +47,11 @@ const getSelector = element => {
 const getSelectorFromElement = element => {
   const selector = getSelector(element)
 
-  if (selector) {
-    return document.querySelector(selector) ? selector : null
+  try {
+    return selector && document.querySelector(selector) ? selector : null
+  } catch (_) {
+    return null
   }
-
-  return null
 }
 
 const getElementFromSelector = element => {
