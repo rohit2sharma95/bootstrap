@@ -32,11 +32,6 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
-
-  // Reset positioning when positioned with Popper
-  &[style] {
-    right: auto#{"/* rtl:ignore */"} !important; // stylelint-disable-line declaration-no-important
-  }
 }
 
 // scss-docs-start responsive-breakpoints
