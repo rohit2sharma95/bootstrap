@@ -16,6 +16,7 @@
 // The dropdown menu
 .dropdown-menu {
   position: absolute;
+  top: 100%;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   min-width: $dropdown-min-width;
@@ -59,6 +60,8 @@
 // Just add .dropup after the standard .dropdown class and you're set.
 .dropup {
   .dropdown-menu {
+    top: auto;
+    bottom: 100%;
     margin-top: 0;
     margin-bottom: $dropdown-spacer;
   }
@@ -70,6 +73,7 @@
 
 .dropend {
   .dropdown-menu {
+    top: 0;
     margin-top: 0;
     margin-left: $dropdown-spacer;
   }
@@ -84,6 +88,7 @@
 
 .dropstart {
   .dropdown-menu {
+    top: 0;
     margin-top: 0;
     margin-right: $dropdown-spacer;
   }
