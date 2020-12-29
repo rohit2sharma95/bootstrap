@@ -42,10 +42,14 @@
 
     .dropdown-menu#{$infix}-start {
       --bs-position: start;
+      right: auto #{"/* rtl:ignore */"};
+      left: 0 #{"/* rtl:ignore */"};
     }
 
     .dropdown-menu#{$infix}-end {
       --bs-position: end;
+      right: 0 #{"/* rtl:ignore */"};
+      left: auto #{"/* rtl:ignore */"};
     }
   }
 }
