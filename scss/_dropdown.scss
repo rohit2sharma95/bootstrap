@@ -17,7 +17,6 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   min-width: $dropdown-min-width;
@@ -32,11 +31,6 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
-
-  // Reset positioning when positioned with Popper
-  &[style] {
-    right: auto#{"/* rtl:ignore */"} !important; // stylelint-disable-line declaration-no-important
-  }
 }
 
 // scss-docs-start responsive-breakpoints
@@ -80,8 +74,6 @@
 .dropend {
   .dropdown-menu {
     top: 0;
-    right: auto;
-    left: 100%;
     margin-top: 0;
     margin-left: $dropdown-spacer;
   }
@@ -97,8 +89,6 @@
 .dropstart {
   .dropdown-menu {
     top: 0;
-    right: 100%;
-    left: auto;
     margin-top: 0;
     margin-right: $dropdown-spacer;
   }
